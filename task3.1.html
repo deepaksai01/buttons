@@ -1,0 +1,39 @@
+<html>
+<head>  
+<style type="text/css">
+body{
+        background-color:blue;
+        
+     }
+</style>
+</head>
+<body>
+<h1 align="center">JS Task</h1>
+<h1 id="heading"></h1>
+
+<input type="text" id="myinput" value="" onchange="displaytext()" />
+<form>
+    <input type="checkbox" id="d1" name="vehicle" value="Bike">I have a Duke<br>
+    <input type="checkbox" id="d2" name="vehicle" value="Car">I have a BMW<br> 
+    <input type="checkbox" id="d3" name="vehicle" value="Scooter">I have a Fascino<br>
+    <input type="submit" value="   Print   " size="30" onClick="return checkbox();">
+</form>
+<script type="text/javascript">
+function displaytext(){
+    var inputelem = document.getElementById('myinput');
+    var elem = document.getElementById('heading');
+    elem.innerHTML = inputelem.value;
+}
+function checkbox()
+{
+    var d1=document.getElementById("d1").checked;
+    var d2=document.getElementById("d2").checked;
+    var d3=document.getElementById("d3").checked;
+    if(d1) document.writeln(" I have a Duke");
+    if(d2) document.write(" I have a  BMW"); 
+    if(d3) document.writeln(" I have Fascino");  
+return false;  
+}  
+</script>
+</body>
+</html>
